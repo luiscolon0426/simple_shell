@@ -1,23 +1,21 @@
+#define _GNU_SOURCE
 #include <stdio.h>
-
-/* Declare a buffer for user input of size 2048 */
-static char input[2048];
+#include <stdlib.h>
+#include <unistd.h>
 
 int main()
-		{
+{
+    char *string;
+    size_t n = 50;
+/*the condition for this while is always true
+ * because 1 is always true */
+    while (1)
+    {
 
-		/* In a never ending loop */
-		while (1) {
+        string = malloc(sizeof(char) * n);
 
-		/* Output our prompt */
-		fputs("$ ", stdout);
-
-		/* Read a line of user input of maximum size 2048 */
-		fgets(input, 2048, stdin);
-
-		/* Echo input back to user */
-		printf("%s", input);
-		}
-
-		return 0;
-		}
+        printf("$ ");
+        getline(&string, &n, stdin);
+        printf("%s", string);
+    }
+}
