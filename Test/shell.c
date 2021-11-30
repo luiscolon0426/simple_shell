@@ -8,9 +8,7 @@
 int main()
 
 {
-	/*pid_t parent_pid;
-	pid_t child_pid;*/
-
+	/*variable with the commands and paths*/
 	char *argv[] = {"/bin/ls", "/home/vagrant/simple_shell/Test/",NULL};
 
 	if (execve(argv[0], argv, NULL)== -1)
