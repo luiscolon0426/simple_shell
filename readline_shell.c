@@ -32,7 +32,7 @@ char *simple_shell_readline(void)
 		if (position >= tmpsize)
 		{
 			tmpsize += LSH_RL_TMPSIZE;
-			tmp = _realloc(buffer, bufsize);
+			tmp = _realloc(tmp, tmpsize);
 
 			if (tmp != NULL)
 			{
