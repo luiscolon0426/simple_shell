@@ -1,6 +1,8 @@
 #ifndef SHELL_H
 #define SHELL_H
 
+/* LIBRARIES */
+
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/types.h>
@@ -10,5 +12,10 @@
 #include <string.h>
 #include <signal.h>
 
+
+/* PROTOTYPES */
+
+void shell_loop(void);
+int _putchar(char c);
 
 #endif /* SHELL_H */
