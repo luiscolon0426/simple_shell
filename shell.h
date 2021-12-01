@@ -17,5 +17,8 @@
 
 void shell_loop(void);
 int _putchar(char c);
+void *_realloc(void *ptr, size_t size)
+
+
 
 #endif /* SHELL_H */
