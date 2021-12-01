@@ -6,7 +6,7 @@
 
 int main(int ac, char **av)
 {
-	char filename[] = "/home/vagrant/repositories/simple_shell/Test/";
+	char filename[] = "/home/vagrant/simple_shell/Test/";
 	char *path = realpath(filename, NULL);
 	unsigned int i;
 	struct stat st;
