@@ -1,6 +1,6 @@
-#include <stddef.h>
+#include "shell.h"
 
-void *reallocation(void *ptr,size_t size) 
+void *_realloc(void *ptr,size_t size) 
 {
 	void *newptr;
 	int msize;
