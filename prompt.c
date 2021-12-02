@@ -19,7 +19,7 @@ int main(void)
 	{
 		string = malloc(sizeof(char) * n);
 
-		write(STDOUT_FILENO, "$ ", 4);
+		write(STDOUT_FILENO, "($) ", 4);
 		getline(&string, &n, stdin);
 	}
 }
