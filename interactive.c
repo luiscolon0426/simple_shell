@@ -5,7 +5,7 @@
  * return: returns the executable argument in the command prompt line.
  */
 
-int interactive(void)
+int interactive()
 {
 	char *input;
 	size_t inputsize = 50;
@@ -13,7 +13,7 @@ int interactive(void)
 
 	while (1)
 	{
-		input = malloc(sizeof(char) * n);
+		input = malloc(sizeof(char) * inputsize);
 
 		write(STDOUT_FILENO, "($) ", 4);
 		length = getline(&input, &inputsize, stdin);

@@ -15,7 +15,7 @@
 
 /* PROTOTYPES */
 int main(int ac __attribute__((unused)), char **av __attribute__((unused)));
-int interactive(void);
+int interactive();
 void shell_loop(void);
 int _putchar(char c);
 void *_realloc(void *ptr, size_t size);
