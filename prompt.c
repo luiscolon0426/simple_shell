@@ -2,7 +2,7 @@
 
 /**
  * main - displays looped prompt and waits for user input.
- * return: returns the executable argument in the command prompt line.
+ * return: returns the executable argument in the command prompt lin.
  */
 
 int main(void)
