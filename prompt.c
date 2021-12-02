@@ -11,9 +11,11 @@ int main()
 
         string = malloc(sizeof(char) * n);
 
-        printf("$ ");
+        _putchar('$');
+		_putchar(' ');
         getline(&string, &n, stdin);
-        printf("%s", string);
+
+
     }
 }
 
