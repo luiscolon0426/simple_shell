@@ -1,7 +1,7 @@
 #include "sh.h"
 
 /**
- * =ain - displays looped prompt and waits for user input.
+ * main - displays looped prompt and waits for user input.
  * return: returns the executable argument in the command prompt line.
  */
 
