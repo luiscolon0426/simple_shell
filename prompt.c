@@ -5,7 +5,7 @@
  * return: returns the executable argument in the command prompt line.
  */
 
-int main(void)
+ main(void)
 {
 	char *string;
 	size_t n = 50;
