@@ -22,5 +22,6 @@ void *_realloc(void *ptr, size_t size);
 char **simple_shell_token(char *line);
 int simple_shell_launch(char **args);
 char prompt(void);
+int entry_point()
 
 #endif /* SH_H */
