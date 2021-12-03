@@ -1,5 +1,5 @@
-#ifndef SHELL_H
-#define SHELL_H
+#ifndef SH_H
+#define SH_H
 
 /* LIBRARIES */
 
@@ -22,4 +22,5 @@ void *_realloc(void *ptr, size_t size);
 char **simple_shell_token(char *line);
 int simple_shell_launch(char **args);
 char prompt(void);
-#endif /* SHELL_H */
+
+#endif /* SH_H */
