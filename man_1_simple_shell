@@ -1,0 +1,21 @@
+.TH SIMPLE_SHELL 1 2021-12-9 GNU
+
+.SH NAME
+
+.B simple_shell - Simple Shell Project
+- Super Simple UNIX command line interpreter
+
+
+.SS ENVIORMENT
+
+'PATH' The default search path for executables. See the above section Path Search.
+
+.SH AUTHORS
+
+.br
+Sofia Mendez Dantas,
+.B
+
+.br
+Luis Colon Santiago,
+.B luis.colon@holbertonschool.com
