@@ -5,7 +5,7 @@
  * return: returns the executable argument in the command prompt line.
  */
 
-int main(void)
+int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 {
 	char *string;
 	size_t n = 50;
@@ -22,6 +22,5 @@ int main(void)
 		write(STDOUT_FILENO, "($) ", 4);
 		getline(&string, &n, stdin);
 	}
+	return (0);
 }
-
-
