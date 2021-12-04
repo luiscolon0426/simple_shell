@@ -1,28 +1,45 @@
 #include "shell.h"
 
 /**
- * _exit_func - when exiting the shell,
- * return 0
- *
- * Return: Always 0
+ * _strlen - Finds the length of the string.
+ * @str: String variable.
+ * Return: Length of the string.
  */
-int _exit_func(void)
+int _strlen(char *str)
 {
-	return (0);
+	unsigned int len = 0;
+
+	while (str[len] != '\0')
+		len++;
+	return (len);
 }
 
-int _str_cmp(char *str1, char *str2)
+/**
+ * _strtok - Creates tokenized input.
+ * @str: Input string.
+ * Return: strings.
+ */
+char **_strtok(char *str)
 {
-	int idxa, idxb;
+/**
+ * _strcmp - compares two string.
+ * @str1: first string to compare.
+ * @str2: second string to compare.
+ * @n: the number of bytes it will compare.
+ */
+
+int _strcmp(char *str1, char *str2)
+{
+	int idx;
 	char space = (' ');
 
-	for (idxa = 0, idxb = 0; str1[idxa] != '\0' || str2[idxb] != '\0'; idxa++, idxb++)
+	for (idx = 0; str1[idx] != '\0' && str2[idx] != '\0'; idx++)
 	{
-		while (str1[idxa] == space)
+		while (str1[idx] == space)
 		{
-			idxa++;
+			idx++;
 		}
-		if (str1[idxa] != str2[idxb])
+		if (str1[idx] != str2[idx])
 			return (0);
 	}
 	return (1);
