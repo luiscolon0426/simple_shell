@@ -1,5 +1,7 @@
 <h1 align="center"> 0x16. C - Simple Shell </h1>
 
+href = https://camo.githubusercontent.com/1583a68da1c82fc61941d68f997ed646a6f7f320043e08a38cf97193ac5bb267/68747470733a2f2f696d6775722e636f6d2f7442594f5362732e706e67
+
 ## Description
 
 Shell is a program that takes the command inputs written from the the user’s keyboard and passes them to the machine to execute them through the kernel. It also verifies if the command inputs from the user are correct.
