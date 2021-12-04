@@ -21,11 +21,11 @@ int _strlen(char *str)
  */
 char **_strtok(char *str)
 {
-char *token = NULL;
-char **arg_str = NULL;
-int idx, count = 0, len = 0;
+	char *token = NULL;
+	char **arg_str = NULL;
+	int idx, count = 0, len = 0;
 
-for (idx = 0; str[idx] != '\0'; idx++)
+	for (idx = 0; str[idx] != '\0'; idx++)
 	{
 		if (str[idx] == ' ')
 		{
@@ -39,7 +39,7 @@ for (idx = 0; str[idx] != '\0'; idx++)
 	{
 		return (NULL);
 	}
-	token = strtok(string, " ");
+	token = strtok(str, " ");
 
 	for (idx = 0; token != NULL; idx++)
 	{
