@@ -1,5 +1,5 @@
-#ifndef SH_H
-#define SH_H
+#ifndef SHELL_H
+#define SHELL_H
 
 /* LIBRARIES */
 
@@ -14,4 +14,6 @@
 
 
 /* PROTOTYPES */
-#endif /* SH_H */
+
+
+#endif /* SHELL_H */
