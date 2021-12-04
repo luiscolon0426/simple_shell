@@ -39,7 +39,7 @@ char **_strtok(char *str)
 	{
 		return (NULL);
 	}
-	token = strtok(string, " ");
+	token = strtok(str, " ");
 
 	for (idx = 0; token != NULL; idx++)
 	{
