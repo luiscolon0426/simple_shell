@@ -16,6 +16,7 @@ int _strlen(char *str)
 
 /**
  * _strtok - Creates tokenized input.
+ * tokenized = breaks the string.
  * @str: Input string.
  * Return: strings.
  */
