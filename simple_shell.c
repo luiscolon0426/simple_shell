@@ -10,9 +10,15 @@
 
 int main (int argc, char **argv, char **env)
 {
+	/**
+	 * buffer = guarda el input.
+	 * buffersize = size original de la variable.
+	 * args = argumentos que el user pasa.
+	 * isatty = checks if the FD is in the terminal
+	 **/
 	char *buffer;
 	char **args;
-	size_t bufsize;
+	size_t buffsize;
 	ssize_t input;
 	int isattycheck, idx;
 	(void)argc;
@@ -22,7 +28,7 @@ int main (int argc, char **argv, char **env)
 	if (isattycheck != '\0')
 		write(1, "($) ", 4);
 
-	while ((input = getline(&buffer, &bufsize, stdin)))
+	while ((input = getline(&buffer, &buffsize, stdin)))
 	{
 		if (input == EOF)
 		{
