@@ -11,14 +11,14 @@
 int main (int argc, char **argv, char **env)
 {
 	/**
-	 * buffer = guarda el input.
-	 * buffersize = size original de la variable.
+	 * tmp = guarda el input.
+	 * tmpsize = size original de la variable.
 	 * args = argumentos que el user pasa.
 	 * isatty = checks if the FD is in the terminal
 	 **/
-	char *buffer;
+	char *tmp;
 	char **args;
-	size_t buffsize;
+	size_t tmpsize;
 	ssize_t input;
 	int isattycheck, idx;
 	(void)argc;
@@ -28,23 +28,23 @@ int main (int argc, char **argv, char **env)
 	if (isattycheck != '\0')
 		write(1, "($) ", 4);
 
-	while ((input = getline(&buffer, &buffsize, stdin)))
+	while ((input = getline(&tmp, &tmpsize, stdin)))
 	{
 		if (input == EOF)
 		{
-			free(buffer); /*llamando el return de otra funcion*/
+			free(tmp); /*llamando el return de otra funcion*/
 			exit(0); /*exit with succes*/
 		}
 		++idx; /* it goes from one token to the next*/
 
-		args = _strtok(buffer);/* strtok = tokenize user input*/
-		_fork(args, argv, env, buffer, idx);/*revisit*/
+		args = _strtok(tmp);/* strtok = tokenize user input*/
+		_fork(args, argv, env, tmp, idx);/*revisit*/
 
-		buffsize = 0;
+		tmpsize = 0;
 
 		if (isatty(FD))
 			write (FD, "($) ", 4);
-		buffer = NULL;/*revisit*/
+		tmp = NULL;/*revisit*/
 	}
 	if (input == -1)
 	{
