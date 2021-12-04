@@ -14,5 +14,9 @@
 
 
 /* PROTOTYPES */
+
 int main (int argc, char **argv, char **env);
+int _str_cmp(char *str1, char *str2);
+int _exit_func(void);
+
 #endif /* SHELL_H */
