@@ -1,34 +1,34 @@
 #include "shell.h"
 
 /**
- * _executable - checks errors before starting the comm
- * @str_com: string with commands
- * Return: 1 if its succesful
+ * _execute - checks for errors before launching the command
+ * @args: string with commands
+ * Return: 1 if launch was success
  */
 int _executable(char **str_com)
 {
-	struct stat st;
+    struct stat st;
 
-	if (str_com[0] == NULL)
-		return (1);
+    if (str_com[0] == NULL)
+        return (1);
 
-	/*env*/
-	else if (strcmp(str_com[0], "getenv") == 0)
-	{
-		/*getenv*/
-		environment();
-		return(1);
-	}
+    /*will stdout environment*/    
+    else if (strcmp(str_com[0], "printenv") == 0)
+    {
+        /*function to get environment*/
+        environment();
+        return(1);
+    }
 
+    /*exit program if "exit" is inputed*/
+    else if (strcmp(str_com[0], "exit") == 0)
+        exit(EXIT_SUCCESS);
 
-	else if (strcmp(str_com[0], "exit") == 0)
-		exit(EXIT_SUCCESS);
-
-	/*if command doesnt work*/
-	else if (stat(*str_com, &st) == -1)
-	{
-		perror("Error:");
-		return (1);
-	}
-	return (_launch(str_com));
+    /*if it doesn't recognize command*/
+    else if (stat(*str_com, &st) == -1)
+    {
+        perror("execute");
+        return (1);
+    }
+    return (_launch(str_com));
 }
