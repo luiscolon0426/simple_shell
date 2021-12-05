@@ -1,22 +1,25 @@
 #ifndef SHELL_H
 #define SHELL_H
 
-/* LIBRARIES */
+extern char **environ;
 
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/types.h>
-#include <stdlib.h>
-#include <sys/wait.h>
-#include <sys/stat.h>
 #include <string.h>
+#include <sys/wait.h>
+#include <stdlib.h>
 #include <signal.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <errno.h>
+#include <linux/limits.h>
 
+char *_user_input(void);
+char **_str_tok(char *string);
+int _executable(char **str_com);
+int environment(void);
+int _launch(char **args);
 
-/* PROTOTYPES */
-
-int main (int argc, char **argv, char **env);
-int _str_cmp(char *str1, char *str2);
-int _exit_func(void);
 
 #endif /* SHELL_H */

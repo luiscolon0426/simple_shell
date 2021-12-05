@@ -9,7 +9,7 @@ int main()
 
 {
 	/*variable with the commands and paths*/
-	char *argv[] = {"/bin/ls", "/home/vagrant/simple_shell/Test/",NULL};
+	char *argv[] = {"/bin/ls", "/home/vagrant/repositories/simple_shell/Test/",NULL};
 
 	if (execve(argv[0], argv, NULL)== -1)
 	{
