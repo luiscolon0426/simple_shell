@@ -7,22 +7,60 @@
  */
 int _launch(char **args)
 {
-    pid_t pid;
-    int status;
 
-    pid = fork();
 
-    if (pid == 0)
-    {
-        if (execvp(args[0], args) == -1)
-            perror("launch");
-        exit(EXIT_FAILURE);
-    }
+	pid_t pid;
+	int status;
 
-    else if (pid < 0)
-        perror("launch");
-    else
-        wait(&status);
+	pid = fork();
 
-    return (1);
+	if (pid == 0)
+	{
+		if (execve(args[0], args, NULL) == -1)
+			perror("launch");
+		exit(EXIT_FAILURE);
+	}
+
+	else if (pid < 0)
+		perror("launch");
+	else
+		wait(&status);
+
+	return (1);
+}
+
+int _builtin_function(char **args)
+{
+	int idx = 0;
+	pid_t pid;
+	int status;
+
+	pid = fork();
+
+	builtin commands[] = {
+		{"ls", "/bin/ls"},
+		{"env", "/bin/env"},
+		{NULL, NULL}
+	};
+
+	while (commands[idx].str1 != NULL)
+	{
+		if (_strcmp(commands[idx].str1, args[0]) == 0)
+		{
+			if (pid == 0)
+			{
+				if (execve(commands[idx].str2,args, NULL) == -1)
+					perror("builtin");
+				exit(EXIT_FAILURE);
+			}
+			else if (pid < 0)
+				perror("launch");
+			else
+				wait(&status);
+		}
+		idx++;
+	}
+	if (commands[idx].str1 != NULL)
+		return (_launch(args));
+	return (0);
 }
