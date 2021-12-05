@@ -6,49 +6,47 @@
  */
 char *_user_input(void)
 {
-    int tmpsize = 100;
-    int dest = 0;
-    char *tmp;
-    int idx;
+	int tmpsize = 100;
+	int dest = 0;
+	char *tmp;
+	int idx;
 
-    tmp = malloc(sizeof(char) * tmpsize);
-	
-    if (tmp != NULL)
-    {
-        free(tmp);
-        exit(EXIT_FAILURE);
-    }
-    while (1)
-    {
-        /*reading each character*/
-        idx = getchar();
+	tmp = malloc(sizeof(char) * tmpsize);
 
-        if (idx == '\n')
-        {
-            tmp[dest] = '\0';
-            return (tmp);
-        }
+	if (tmp != NULL)
+	{
+		free(tmp);
+		exit(EXIT_FAILURE);
+	}
+	while (1)
+	{
+		idx = getchar();
 
-        /*cntrl-d exit*/
-        else if (idx == EOF)
-        {
-            printf("\n");
-            exit(EXIT_SUCCESS);
-        }
-        else
-            tmp[dest] = idx;
-        dest++;
+		if (idx == '\n')
+		{
+			tmp[dest] = '\0';
+			return (tmp);
+		}
 
-        /*if need more memory space, then add*/
-        if (dest >= tmpsize)
-        {
-            tmpsize += 100;
-            tmp = realloc(tmp, tmpsize);
-            if (tmp != NULL)
-            {
-                free(tmp);
-                exit(EXIT_FAILURE);
-            }
-        }
-    }
+		else if (idx == EOF)
+		{
+			printf("\n");
+			exit(EXIT_SUCCESS);
+		}
+
+		else
+			tmp[dest] = idx;
+		dest++;
+
+		if (dest >= tmpsize)
+		{
+			tmpsize += 100;
+			tmp = realloc(tmp, tmpsize);
+			if (tmp != NULL)
+			{
+				free(tmp);
+				exit(EXIT_FAILURE);
+			}
+		}
+	}
 }
