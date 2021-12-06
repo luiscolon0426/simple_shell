@@ -11,7 +11,7 @@ int main(void)
 	int stat;
 
 	do {
-		write(1,"($HELL) ", 8);
+		write(1, "($HELL) ", 8);
 		string = _user_input();
 		str_com = _str_tok(string);
 		stat = _executable(str_com);
