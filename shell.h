@@ -45,6 +45,6 @@ int str_len(char *str);
 char *_strcpy(char *dest, char *src);
 int _strcmp(char *s1, char *s2);
 int _builtin_function(char **args);
-
+int _putchar(char c);
 
 #endif /* SHELL_H */
