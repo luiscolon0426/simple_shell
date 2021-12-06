@@ -14,13 +14,13 @@ char *_user_input(void)
 
 
 	idx = getline(&tmp, &tmpsize, stdin);
-	printf("%s\n", tmp);
 	if (idx < 0)
 	{
 		free(tmp);
 		exit(EXIT_FAILURE);
 	}
 
+	/*search for the tmp and use malloc*/
 	comm = malloc(sizeof(char) * str_len(tmp));
 	if (comm == NULL)
 	{
