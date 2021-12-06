@@ -1,20 +1,20 @@
 #include "shell.h"
 
 /**
- * enviornment - Checks for the enviornment
+ * environment - Checks for the enviornment
  * in the shell
  * Return: 0
  **/
 
 int environment(void)
 {
-  int count = 0;
+	int count = 0;
 
-  while(environ[count] != NULL)
-  {
-    printf("%s\n", environ[count]);
-    count++;
-  }
+	while (environ[count] != NULL)
+	{
+		printf("%s\n", environ[count]);
+		count++;
+	}
 
-  return (0);
+	return (0);
 }
