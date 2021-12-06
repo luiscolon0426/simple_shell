@@ -1,17 +1,17 @@
 #include "shell.h"
 
 /**
- * _str_tok - splits the string into tokens
- * @line: string to be splitted
- * Return: pointer to the divided string
+ * _str_tok - tokenizes the strings(splits).
+ * @string: string to be tokenized
+ * Return: string /
  */
 char **_str_tok(char *string)
 {
-	int bufsize = 64, position = 0;
+	int tmpsize = 64, position = 0;
 	char *token;
 	char **tokens;
 
-	tokens = malloc(bufsize * sizeof(char *));
+	tokens = malloc(tmpsize * sizeof(char *));
 	if (tokens == NULL)
 	{
 		perror("Error\n");
