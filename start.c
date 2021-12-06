@@ -29,6 +29,11 @@ int _launch(char **args)
 	return (1);
 }
 
+/**
+ * _builtin_function - types command without /bin/
+ * @args: argument
+ * Return: 0
+ **/
 int _builtin_function(char **args)
 {
 	int idx = 0;
@@ -49,7 +54,7 @@ int _builtin_function(char **args)
 		{
 			if (pid == 0)
 			{
-				if (execve(commands[idx].str2,args, NULL) == -1)
+				if (execve(commands[idx].str2, args, NULL) == -1)
 					perror("builtin");
 				exit(EXIT_FAILURE);
 			}
