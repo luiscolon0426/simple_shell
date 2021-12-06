@@ -10,6 +10,8 @@ int main(void)
 	char **str_com;
 	int stat;
 
+/*need to add environ, but idk where*/
+
 	do {
 		write(1, "($HELL) ", 8);
 		string = _user_input();
