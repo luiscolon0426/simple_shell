@@ -12,7 +12,7 @@ int environment(void)
 
 	while (environ[count] != NULL)
 	{
-		printf("%s\n", environ[count]);
+		write(1, *environ, 46);
 		count++;
 	}
 
