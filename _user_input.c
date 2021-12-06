@@ -13,7 +13,7 @@ char *_user_input(void)
 	int idx;
 
 
-	idx = getline(&tmp , &tmpsize, stdin);
+	idx = getline(&tmp, &tmpsize, stdin);
 	printf("%s\n", tmp);
 	if (idx < 0)
 	{
@@ -28,6 +28,5 @@ char *_user_input(void)
 		exit(EXIT_FAILURE);
 	}
 	_strcpy(comm, tmp);
-
 	return (comm);
 }
