@@ -28,5 +28,6 @@ char *_user_input(void)
 		exit(EXIT_FAILURE);
 	}
 	_strcpy(comm, tmp);
+	free(tmp);
 	return (comm);
 }
