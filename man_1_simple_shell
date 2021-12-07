@@ -6,8 +6,12 @@
 - Super Simple UNIX command line interpreter
 
 .SH SYNOPSIS
-
-.B ./hsh
+.TP
+.B INTERACTIVE MODE
+./hsh
+.TP
+.B NON-INTERACTIVE
+[\fBecho\fR \fIcommand\fR] | ./hsh
 
 .SH DESCRIPTION
 
@@ -47,6 +51,25 @@ Compiler:
 .B /bin/cat *filename*
 
 - prints what's inside the file
+
+.SH EXAMPLES
+.B INTERACTIVE MODE:
+
+$ ./hsh
+($HELL) /bin/ls
+hsh main.c shell.c
+($HELL) /bin/cat test_ls_2
+test_ls_2
+($HELL) exit
+
+.B NON-INTERACTIVE MODE:
+$ echo "/bin/ls" | ./hsh
+hsh main.c shell.c test_ls_2
+$
+
+$ echo "/bin/cat" test_ls_2 | ./hsh
+test_ls_2
+$
 
 .SH AUTHORS
 
