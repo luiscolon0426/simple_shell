@@ -22,7 +22,13 @@ Shell is a program that takes the command inputs written from the the user’s k
 + All your header files should be include guarded
 + Use system calls only when you need to ([why?]())
 
-## Returns
+
+## Authors
+
+Sofia Mendez Dantas | [@afiorg9000](https://github.com/afiorg9000)
+
+Luis Colón Santiago | [@luiscolon0426](https://github.com/luiscolon0426)
+
 
 
 
