@@ -45,6 +45,7 @@ int _builtin_function(char **args)
 	builtin commands[] = {
 		{"ls", "/bin/ls"},
 		{"env", "/bin/env"},
+		{"cat"},
 		{NULL, NULL}
 	};
 
