@@ -5,16 +5,54 @@
 .B simple_shell - Simple Shell Project
 - Super Simple UNIX command line interpreter
 
+.SH SYNOPSIS
 
-.SS ENVIORMENT
+.B ./hsh
 
-'PATH' The default search path for executables. See the above section Path Search.
+.SH DESCRIPTION
+
+simple_shell is a command line interpreter, or shell, in the tradition of the first Unix shell written by Ken Thompson. This shell is intentionally minimalistic, yet includes the basic functionality of a traditional Unix-like command line interface. simple_shell is desgined to run on the linux environment.
+
+.P
+
+.RS
+Compiler:
+.B $ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
+
+.P
+
+
+.RS
+
+
+
+.SH BUILTINS
+
+.The following builtin commands are supported:
+
+.IT
+
+.B env
+
+- prints the environment variables
+
+.B exit
+
+- exits the program
+
+.B /bin/ls
+
+- prints a list of files in the current directory
+
+.B /bin/cat *filename*
+
+- prints what's inside the file
 
 .SH AUTHORS
 
 .br
 Sofia Mendez Dantas,
-.B
+.B sofia.mendez@holbertonschool.com
 
 .br
 Luis Colon Santiago,
