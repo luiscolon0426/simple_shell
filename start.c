@@ -17,7 +17,7 @@ int _launch(char **args)
 	if (pid == 0)
 	{
 		if (execve(args[0], args, NULL) == -1)
-			perror("launch");
+			perror("ERROR");
 		exit(EXIT_FAILURE);
 	}
 
