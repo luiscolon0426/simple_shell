@@ -64,3 +64,17 @@ int _strcmp(char *s1, char *s2)
 	}
 	return (0);
 }
+
+/**
+ * _puts - Print a string,
+ * followed by a new line
+ * @str: The string to be printed.
+ */
+void _puts(char *str)
+{
+	while (*str)
+		_putchar (*str++);
+
+	_putchar('\n');
+}
+

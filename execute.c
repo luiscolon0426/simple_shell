@@ -12,7 +12,7 @@ int _executable(char **str_com)
 	if (str_com[0] == NULL)
 		return (1);
 
-	else if (strcmp(str_com[0], "printenv") == 0)
+	else if (strcmp(str_com[0], "env") == 0)
 	{
 		environment();
 		return (1);

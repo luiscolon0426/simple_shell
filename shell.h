@@ -36,6 +36,7 @@ char *str2;
 
 
 /* PROTOTYPES */
+
 char *_user_input(void);
 char **_str_tok(char *string);
 int _executable(char **str_com);
@@ -46,5 +47,6 @@ char *_strcpy(char *dest, char *src);
 int _strcmp(char *s1, char *s2);
 int _builtin_function(char **args);
 int _putchar(char c);
+void _puts(char *str);
 
 #endif /* SHELL_H */

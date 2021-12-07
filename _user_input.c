@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * _user_input - accepts the input, and return.
+ * _user_input - accepts the input, and returns buffer.
  * Return: tmp
  */
 

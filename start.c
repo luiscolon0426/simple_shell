@@ -44,7 +44,7 @@ int _builtin_function(char **args)
 
 	builtin commands[] = {
 		{"ls", "/bin/ls"},
-		{"printenv", "/bin/env"},
+		{"env", "/bin/env"},
 		{NULL, NULL}
 	};
 

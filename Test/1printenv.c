@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "sh.h"
 
 extern char **environ;
 
@@ -14,7 +14,7 @@ int main(void)
 
 	for(i = 0; environ[i] != NULL; i++)
 	{
-		printf("%s\n", environ[i]);
+		_putchar(environ[i]);
 	}
 	return (0);
 }

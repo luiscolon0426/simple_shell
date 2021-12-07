@@ -1,7 +1,8 @@
 #include "shell.h"
+#include <unistd.h>
 
 /**
- * environment - Checks for the enviornment
+ * environment - Prints for the enviornment
  * in the shell
  * Return: 0
  **/
@@ -12,7 +13,9 @@ int environment(void)
 
 	while (environ[count] != NULL)
 	{
-		write(1, *environ, 46);
+		/*Added newline in write style*/
+		write(STDOUT_FILENO, environ[count], str_len(environ[count]));
+		write(STDOUT_FILENO, "\n", 1);
 		count++;
 	}
 

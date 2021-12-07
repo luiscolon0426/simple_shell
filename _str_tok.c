@@ -3,7 +3,8 @@
 /**
  * _str_tok - tokenizes the strings(splits).
  * @string: string to be tokenized
- * Return: string /
+ *
+ * Return: string
  */
 char **_str_tok(char *string)
 {
