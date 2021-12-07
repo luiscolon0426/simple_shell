@@ -8,10 +8,16 @@
  */
 char **_str_tok(char *string)
 {
-	int tmpsize = 64, position = 0;
+	/**
+	 * tokens - double pointer array.
+	 * token - pointer that falls inside the pointers
+	 * of the double pointer array
+	 **/
+	int tmpsize = 50, position = 0;
 	char *token;
 	char **tokens;
 
+	/*mallocs the empty "tokens" so it can store "token"*/
 	tokens = malloc(tmpsize * sizeof(char *));
 	if (tokens == NULL)
 	{
