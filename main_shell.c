@@ -9,6 +9,7 @@
 int main(void)
 {
 	char *string;
+	const char *delim;
 	char **str_com;
 	int flag;
 
@@ -23,7 +24,7 @@ int main(void)
 			free(string);
 			continue;
 		}
-		str_com = _str_tok(string);
+		str_com = _str_tok(string, delim);
 		_launch(str_com, string);
 		free_grid(str_com);
 		free(string);
