@@ -1,26 +1,26 @@
 #include "shell.h"
 
 /**
- * path_to_arr - saves path in a 2d array
- * @env: the enviorement.
- * Return: the PATH in a 2d arr.
+ * path - saves path.
+ * @environ: the enviorement.
+ * Return: the PATH.
  */
 char **path(char **environ)
 {
-	int i, count = 2, len;
+	int buffer, count = 2, len;
 	char *pathstr = NULL, *token = NULL;
 	char **path = NULL;
 
-	for (i = 0; environ[i] != NULL; i++)
+	for (buffer = 0; environ[buffer] != NULL; i++)
 	{
-		if (_strcmp(environ[i], "PATH") == 0)
+		if (_strcmp(environ[buffer], "PATH") == 0)
 			break;
 	}
-	pathstr = environ[i];
+	pathstr = environ[buffer];
 
-	for (i = 0; pathstr[i] != '\0'; i++)
+	for (; pathstr[buffer] != '\0'; buffer++)
 	{
-		if (pathstr[i] == ':')
+		if (pathstr[buffer] == ':')
 			count++;
 	}
 	path = malloc(sizeof(char *) * count);
@@ -30,17 +30,17 @@ char **path(char **environ)
 	}
 	token = *_str_tok(pathstr, "=");
 	count--;
-	for (i = 0; i < count; i++)
+	for (buffer = 0; buffer < count; buffer++)
 	{
 		token = *_str_tok(NULL, ":");
 		len = str_len(token);
-		path[i] = malloc(sizeof(char) * (len + 1));
-		if (path[i] == NULL)
+		path[buffer] = malloc(sizeof(char) * (len + 1));
+		if (path[buffer] == NULL)
 		{
 			return (NULL);
 		}
-		path[i] = token;
+		path[buffer] = token;
 	}
-	path[i] = NULL;
+	path[buffer] = NULL;
 	return (path);
 }
