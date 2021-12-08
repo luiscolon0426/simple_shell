@@ -8,7 +8,7 @@
 char **path(char **environ)
 {
 	int buffer, count = 2, len;
-	char *pathstr = NULL, *token = NULL;
+	char *str_path = NULL, *token = NULL;
 	char **path = NULL;
 
 	for (buffer = 0; environ[buffer] != NULL; buffer++)
@@ -16,11 +16,11 @@ char **path(char **environ)
 		if (_strcmp(environ[buffer], "PATH") == 0)
 			break;
 	}
-	pathstr = environ[buffer];
+	str_path = environ[buffer];
 
-	for (; pathstr[buffer] != '\0'; buffer++)
+	for (; str_path[buffer] != '\0'; buffer++)
 	{
-		if (pathstr[buffer] == ':')
+		if (str_path[buffer] == ':')
 			count++;
 	}
 	path = malloc(sizeof(char *) * count);
@@ -28,7 +28,7 @@ char **path(char **environ)
 	{
 		return (NULL);
 	}
-	token = *_str_tok(pathstr, "=");
+	token = *_str_tok(str_path, "=");
 	count--;
 	for (buffer = 0; buffer < count; buffer++)
 	{
