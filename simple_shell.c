@@ -20,6 +20,6 @@ int main(void)
 		stat = _executable(str_com);
 		free(string);
 		free(str_com);
-	} while (stat);
+	} while (1);
 	return (EXIT_SUCCESS);
 }
