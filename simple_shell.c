@@ -14,7 +14,7 @@ int main(void)
 /*need to add environ, but idk where*/
 
 	do {
-		write(1, "($HELL) ", 8);
+		write(1, "(#cisfun$) ", 10);
 		string = _user_input();
 		str_com = _str_tok(string);
 		stat = _executable(str_com);
