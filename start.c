@@ -26,7 +26,7 @@ int _launch(char **args)
 	else
 		wait(&status);
 
-	return (1);
+	return (0);
 }
 
 /**
