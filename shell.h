@@ -39,9 +39,9 @@ char *str2;
 
 char *_user_input(void);
 char **_str_tok(char *string);
-int _executable(char **str_com, char *str);
+int _executable(char *str);
 int environment(void);
-int _launch(char **args);
+void _launch(char **args, char *string);
 int str_len(char *str);
 char *_strcpy(char *dest, char *src);
 int _strcmp(char *s1, char *s2);
