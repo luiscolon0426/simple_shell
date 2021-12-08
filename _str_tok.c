@@ -3,6 +3,7 @@
 /**
  * _str_tok - tokenizes the strings(splits).
  * @string: string to be tokenized
+ * @delim: delimiter
  *
  * Return: string
  */
