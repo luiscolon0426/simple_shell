@@ -39,7 +39,7 @@ char *str2;
 
 char *_user_input(void);
 char **_str_tok(char *string);
-int _executable(char **str_com);
+int _executable(char **str_com, char *str);
 int environment(void);
 int _launch(char **args);
 int str_len(char *str);
@@ -49,7 +49,7 @@ int _builtin_function(char **args);
 int _putchar(char c);
 void _puts(char *str);
 
-
+void free_grid(char **args);
 
 
 #endif /* SHELL_H */
