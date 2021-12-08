@@ -11,7 +11,7 @@ char **path(char **environ)
 	char *pathstr = NULL, *token = NULL;
 	char **path = NULL;
 
-	for (buffer = 0; environ[buffer] != NULL; i++)
+	for (buffer = 0; environ[buffer] != NULL; buffer++)
 	{
 		if (_strcmp(environ[buffer], "PATH") == 0)
 			break;
