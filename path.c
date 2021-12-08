@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * path - saves path.
+ * path - saves path in 2d array.
  * @environ: the enviorement.
  * Return: the PATH.
  */
@@ -30,7 +30,7 @@ char **path(char **environ)
 	}
 	token = *_str_tok(str_path, "=");
 	count--;
-	for (buffer = 0; buffer < count; buffer++)
+	for (; buffer < count; buffer++)
 	{
 		token = *_str_tok(NULL, ":");
 		len = str_len(token);
