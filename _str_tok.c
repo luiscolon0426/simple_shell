@@ -6,7 +6,7 @@
  *
  * Return: string
  */
-char **_str_tok(char *string)
+char **_str_tok(char *string, const char *delim)
 {
 	/**
 	 * tokens - double pointer array.
