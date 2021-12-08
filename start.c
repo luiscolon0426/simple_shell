@@ -3,9 +3,10 @@
 /**
  * _launch - launches the command
  * @args: string with commands
+ * @string: user input
  * Return: 1 success
  */
-int _launch(char **args)
+void _launch(char **args, char *string)
 {
 
 
@@ -17,57 +18,18 @@ int _launch(char **args)
 	if (pid == 0)
 	{
 		if (execve(args[0], args, NULL) == -1)
-			perror("ERROR");
-		exit(EXIT_FAILURE);
-	}
+		{
+			free(string);
+			free_grid(args);
+			perror("ERROR!");
+			exit(EXIT_FAILURE);
+			/*free_grid(args);*/
+		}
+		free(string);
+		free_grid(args);
+		/*free_grid(args);*/
 
-	else if (pid < 0)
-		perror("launch");
+	}
 	else
 		wait(&status);
-
-	return (1);
-}
-
-/**
- * _builtin_function - types command without /bin/
- * @args: argument
- * Return: 0
- **/
-int _builtin_function(char **args)
-{
-	int idx = 0;
-	pid_t pid;
-	int status;
-
-
-	builtin commands[] = {
-		{"ls", "/bin/ls"},
-		{"env", "/bin/env"},
-		{"cat", "/bin/cat"},
-		{NULL, NULL}
-	};
-
-	pid = fork();
-
-	while (commands[idx].str1 != NULL)
-	{
-		if (_strcmp(commands[idx].str1, args[0]) == 0)
-		{
-			if (pid == 0)
-			{
-				if (execve(commands[idx].str2, args, NULL) == -1)
-					perror("builtin");
-				exit(EXIT_FAILURE);
-			}
-			else if (pid < 0)
-				perror("launch");
-			else
-				wait(&status);
-		}
-		idx++;
-	}
-	if (commands[idx].str1 != NULL)
-		return (_launch(args));
-	return (0);
 }
