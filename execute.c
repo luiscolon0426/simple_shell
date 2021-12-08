@@ -7,7 +7,6 @@
  */
 int _executable(char **str_com)
 {
-	struct stat st;
 
 	if (str_com[0] == NULL)
 		return (1);
