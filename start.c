@@ -23,11 +23,9 @@ void _launch(char **args, char *string)
 			free(string);
 			free_grid(args);
 			exit(EXIT_FAILURE);
-			/*free_grid(args);*/
 		}
 		free(string);
 		free_grid(args);
-		/*free_grid(args);*/
 
 	}
 	else

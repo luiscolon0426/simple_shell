@@ -7,7 +7,6 @@
 char *_user_input(void)
 {
 	size_t tmpsize = 0;
-	/*char *comm, *tmp = NULL;*/
 	char *tmp = NULL;
 	int idx = 0;
 
