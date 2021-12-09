@@ -3,11 +3,10 @@
 /**
  * _str_tok - tokenizes the strings(splits).
  * @string: string to be tokenized
- * @delim: delimiter
  *
  * Return: string
  */
-char **_str_tok(char *string, const char *delim)
+char **_str_tok(char *string)
 {
 	/**
 	 * tokens - double pointer array.

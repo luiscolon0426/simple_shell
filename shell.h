@@ -1,6 +1,6 @@
 #ifndef SHELL_H
 #define SHELL_H
-#define DISCARD_UNUNSED_PARAMETER(x) (void)(x)
+#define DISCARD_UNUNSED_PARAMETER(x) (void)x
 
 extern char **environ;
 
@@ -38,7 +38,7 @@ char *str2;
 /* PROTOTYPES */
 
 char *_user_input(void);
-char **_str_tok(char *string, const char *delim);
+char **_str_tok(char *string);
 int _executable(char *str);
 int environment(void);
 void _launch(char **args, char *string);
@@ -49,7 +49,6 @@ int _builtin_function(char **args);
 int _putchar(char c);
 void _puts(char *str);
 int _strncmp(const char *s1, const char *s2, size_t n);
-char **path(char **environ);
 
 
 /*Global*/

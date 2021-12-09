@@ -3,8 +3,6 @@
 
 /**
  * main - Entry point
- * @argc: argument count
- * @argv: argument vector
  *
  * Return: Success
  */
@@ -14,8 +12,8 @@ int main(int argc, char *argv[])
 	char **str_com;
 	int flag;
 
+	/*need add environ, but idk where*/
 	latrampa = argv;
-
 	DISCARD_UNUNSED_PARAMETER(argc);
 		do {
 			flag = isatty(STDIN_FILENO);
