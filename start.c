@@ -19,16 +19,13 @@ void _launch(char **args, char *string)
 	{
 		if (execve(args[0], args, NULL) == -1)
 		{
+			perror(NULL);
 			free(string);
 			free_grid(args);
-			perror("ERROR!");
 			exit(EXIT_FAILURE);
-			/*free_grid(args);*/
 		}
 		free(string);
 		free_grid(args);
-		/*free_grid(args);*/
-
 	}
 	else
 		wait(&status);

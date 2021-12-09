@@ -1,6 +1,6 @@
 #ifndef SHELL_H
 #define SHELL_H
-
+#define DISCARD_UNUNSED_PARAMETER(x) (void)(x)
 
 extern char **environ;
 
@@ -49,6 +49,11 @@ int _builtin_function(char **args);
 int _putchar(char c);
 void _puts(char *str);
 int _strncmp(const char *s1, const char *s2, size_t n);
+
+
+/*Global*/
+char **latrampa;
+
 
 void free_grid(char **args);
 

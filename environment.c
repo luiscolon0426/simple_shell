@@ -1,5 +1,4 @@
 #include "shell.h"
-#include <unistd.h>
 
 /**
  * environment - Prints for the enviornment

@@ -88,7 +88,7 @@ void _puts(char *str)
  */
 int _strncmp(const char *s1, const char *s2, size_t n)
 {
-	int index;
+	size_t index;
 
 	for (index = 0; index < n && (s1[index] ==
 				s2[index]) && s1[index] != '\0'; index++, n--)

@@ -1,2 +1,2 @@
 #!/bin/bash
-valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./shs
+valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./hsh
